@@ -25,4 +25,21 @@ describe('SimpleFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('simple-form Works! message', () => {
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('simple-form');
+  });
+
+  it('gets textbox value on click', () => {
+    expect(component.textBoxValue).toEqual('');
+
+    let compiled = fixture.debugElement.nativeElement;
+    let myInput = compiled.querySelector('#myInput');
+    myInput.value = 'foo';
+    myInput.dispatchEvent(new Event('input'));
+    compiled.querySelector('button').click();
+    fixture.detectChanges();
+    expect(component.textBoxValue).toEqual('foo');
+  });
 });
