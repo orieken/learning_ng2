@@ -33,7 +33,6 @@ describe('SimpleFormComponent', () => {
 
   it('gets textbox value on click', () => {
     expect(component.textBoxValue).toEqual('');
-
     let compiled = fixture.debugElement.nativeElement;
     let myInput = compiled.querySelector('#myInput');
     myInput.value = 'foo';

@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
     <div>
     <input id="myInput" #myInput type="text"/>
     <button id="click-me" (click)="onClick(myInput.value)">Click me!</button>
+    <div id="input-value">{{ textBoxValue }}</div>
     </div>
   `,
   styles: []
