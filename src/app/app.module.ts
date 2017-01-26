@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { ModalComponent } from './modal/modal.component';
+import { PoptartHolderComponent } from './poptart-holder/poptart-holder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    ModalComponent,
+    PoptartHolderComponent
   ],
   imports: [
     BrowserModule,
