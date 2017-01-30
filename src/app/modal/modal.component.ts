@@ -5,7 +5,7 @@ import {Component, OnInit, Input} from '@angular/core';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class Modal implements OnInit {
 
   @Input('modal-id') modalId: string;
   @Input('modal-title') modalTitle: string;

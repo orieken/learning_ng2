@@ -5,22 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
-import { ModalComponent } from './modal/modal.component';
-import { PoptartHolderComponent } from './poptart-holder/poptart-holder.component';
+import { Modal } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleFormComponent,
-    ModalComponent,
-    PoptartHolderComponent
+    Modal
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import {DebugElement, Component} from '@angular/core';
 
-import { ModalComponent } from './modal.component';
+import { Modal } from './modal.component';
 
 @Component({
   template: `<app-modal modal-id='abc' modal-title='foo'></app-modal>`
@@ -11,22 +11,22 @@ import { ModalComponent } from './modal.component';
 class TestModalComponent {
 }
 
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
+describe('Modal', () => {
+  let component: Modal;
+  let fixture: ComponentFixture<Modal>;
   let testFixture: ComponentFixture<TestModalComponent>;
   let testModal: Element;
   let testModalAttributes: NamedNodeMap;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TestModalComponent, ModalComponent ]
+      declarations: [ TestModalComponent, Modal ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalComponent);
+    fixture = TestBed.createComponent(Modal);
     component = fixture.componentInstance;
     fixture.detectChanges();
     testFixture = TestBed.createComponent(TestModalComponent);
