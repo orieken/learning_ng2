@@ -9,7 +9,8 @@
     "test:watch": "ng test",
     "test": "ng test --single-run=true",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "deploy": "ng github-pages:deploy --user-page --message 'Optional commit message'"
   },
   "private": true,
   "dependencies": {
