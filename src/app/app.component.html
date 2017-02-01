@@ -6,3 +6,13 @@
 <div>
 <app-simple-form></app-simple-form>
 </div>
+<div>
+  <button id="modal-button" (click)="openModal(TEST_MODAL_ID)">Open Modal</button>
+  <app-modal modal-title="Catchy Title Here" modal-id="{{ TEST_MODAL_ID }}">
+    <div class="center">Are you sure about this?</div>
+    <div class="buttons">
+      <button class="flat" (click)="doTheThing()">Yes</button>
+      <button (click)="closeModal(TEST_MODAL_ID)">No</button>
+    </div>
+  </app-modal>
+</div>

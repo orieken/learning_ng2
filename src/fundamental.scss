@@ -1,0 +1,85 @@
+$color-background: #fefefe !default;
+$color-text: #333 !default;
+$color-text-button: #333 !default;
+$color-mark: #f3f315 !default;
+
+$color-border: #aaa !default;
+$color-table-row: lighten($color-text, 75%) !default;
+
+$color-primary: #7fd4ff !default;
+$color-secondary: #86deb7 !default;
+
+$color-toggle-on: #86deb7 !default;
+$color-toggle-off: #da6869 !default;
+
+$font-url: 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono' !default;
+$font-name: 'Droid Sans' !default;
+$font-name-mono: 'Droid Sans Mono' !default;
+
+$white: #fff;
+
+@mixin shadow-float {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .22),
+  0 17px 20px 0 rgba(0, 0, 0, .12);
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, .4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.modal {
+  @include shadow-float();
+
+  background-color: $white;
+  left: calc(50% - 200px);
+  max-height: calc(100% - 10em);
+  min-height: 10em;
+  overflow-y: auto;
+  position: fixed;
+  top: 5em;
+  width: 400px;
+  z-index: 1100;
+
+  .title {
+    background-color: $color-secondary;
+
+    .right {
+      color: $color-text;
+      cursor: pointer;
+    }
+
+    .right:hover {
+      color: lighten($color-text, 10%);
+    }
+  }
+
+  .title,
+  .body {
+    padding: .75em;
+  }
+
+  input,
+  select {
+    height: auto;
+    margin-bottom: 7px;
+  }
+
+  .buttons {
+    float: right;
+    margin: 1em;
+    margin-right: 0;
+
+    .flat {
+      background-color: $white;
+      color: $color-text;
+      line-height: 1.1em;
+    }
+  }
+}
+

@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { Modal } from './modal/modal.component';
+import {ModalService} from "./services/modal/modal.service";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Modal } from './modal/modal.component';
     HttpModule
   ],
   providers: [
+    ModalService
   ],
   bootstrap: [AppComponent]
 })

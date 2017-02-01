@@ -3,14 +3,18 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {SimpleFormComponent} from "./simple-form/simple-form.component";
+import {ModalService} from "./services/modal/modal.service";
+import {Modal} from "./modal/modal.component";
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        SimpleFormComponent
+        SimpleFormComponent,
+        Modal
       ],
+      providers: [ModalService]
     });
   });
 
